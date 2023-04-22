@@ -1,18 +1,23 @@
 import pandas as pd
 from datetime import datetime
 from sklearn.neighbors import NearestNeighbors
-import warnings
-warnings.filterwarnings('ignore')
 
-def time_to_float(time_str):
-      # parse time string into datetime object
-      dt_obj = datetime.strptime(time_str, '%H:%M')
-      # extract hour and minute components
-      hour = dt_obj.hour
-      minute = dt_obj.minute
-      # convert to float between 0 to 24
-      time_float = hour + minute / 60
-      return time_float
+def merge_user_rows(df):
+   id_counts = dict(df['ID'].value_counts())
+   merged_df = df.groupby('ID').sum().reset_index()
+   merged_df['Duration (min)'] = merged_df.apply(lambda x: x['Duration (min)'] / id_counts[x['ID']], axis=1)
+   merged_df['Calories Consumed'] = merged_df.apply(lambda x: x['Calories Consumed'] / id_counts[x['ID']], axis=1)
+   return merged_df
+
+# def time_to_float(time_str):
+#       # parse time string into datetime object
+#       dt_obj = datetime.strptime(time_str, '%H:%M')
+#       # extract hour and minute components
+#       hour = dt_obj.hour
+#       minute = dt_obj.minute
+#       # convert to float between 0 to 24
+#       time_float = hour + minute / 60
+#       return time_float
 
 def handle_categorical(df):
   # sport type
@@ -22,31 +27,45 @@ def handle_categorical(df):
   df = df.join(pd.get_dummies(df["Weekday"]))
   df = df.drop("Weekday", axis=1)
   # start time
-  df["Start Time in float"] = df["Start Time"].apply(time_to_float)
-  df = df.drop("Start Time", axis=1)
+  # df["Start Time in float"] = df["Start Time"].apply(time_to_float)
+  # df = df.drop("Start Time", axis=1)
   return df
 
-def generate_input(weekday, sport_type, start_time, duration, calories_burned):
+def generate_input(user_info):
   df2 = pd.DataFrame(columns=df.columns)
-  new_row = {weekday: 1,
-          sport_type: 1,
-          "Start Time in float": time_to_float(start_time),
-          "Duration (min)": duration,
-          "Calories Burned": calories_burned}
-  df2 = df2.append(new_row, ignore_index=True)
-  df2 = df2.fillna(0)
-  return list(df2.iloc[0][1:])
+  row_num = len(user_info)
+  for row in user_info:
+    new_row = {
+              "ID": row[0],
+              row[1]: 1,
+              row[2]: 1,
+              "Duration (min)": row[3],
+              "Calories Consumed": row[4]}
+    df2 = df2.append(new_row, ignore_index=True)
+    df2 = df2.fillna(0)
+  return df2
+
 
 df = pd.read_csv("sport_data.csv")
+# drop location
+df = df.drop('Location (City)', axis=1)
 df = handle_categorical(df)
+df = merge_user_rows(df)
 
 # fit model
 X = df[list(df.columns)[1:]]
 neigh = NearestNeighbors(n_neighbors=2)
 nbrs = neigh.fit(X)
 
-query = [generate_input("Sunday", "Basketball", "16:00", 120, 1000)]
-distances, indices = nbrs.kneighbors(query)
-# print(indices)
-# for index in indices:
-#   print(df.iloc[index])
+query = [
+  [11, "Monday", "Basketball", 120, 800],
+  [11, "Sunday", "Running", 60, 400]
+]
+input_df = generate_input(query)
+processed_input = merge_user_rows(input_df).iloc[:,1:].values.tolist()
+# print(processed_input)
+
+distances, indices = nbrs.kneighbors(processed_input)
+print(indices)
+for index in indices:
+  print(df.iloc[index])
