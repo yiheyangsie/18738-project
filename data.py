@@ -47,6 +47,6 @@ nbrs = neigh.fit(X)
 
 query = [generate_input("Sunday", "Basketball", "16:00", 120, 1000)]
 distances, indices = nbrs.kneighbors(query)
-print(indices)
-for index in indices:
-  print(df.iloc[index])
+# print(indices)
+# for index in indices:
+#   print(df.iloc[index])

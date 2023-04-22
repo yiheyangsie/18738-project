@@ -12,24 +12,34 @@ from sklearn.ensemble import RandomForestClassifier
 
 from sklearn.metrics import accuracy_score
 
-# test
-st.title('Streamlit Example')
+
+st.title("Hey bro, need a sport mate?")
 
 st.write("""
-# Explore different classifier and datasets
-Which one is the best?
+# Explore your city, sport type, duration, and calories goal
+Which fits you best?
 """)
 
-dataset_name = st.sidebar.selectbox(
-    'Select Dataset',
-    ('Iris', 'Breast Cancer', 'Wine')
+city_name = st.sidebar.selectbox(
+    'Select City',
+    ('Pittsburgh','San Francisco', 'Austin', 'New York City', 'Boston','Los Angeles', 'San Diego','Chicago', 'Seattle', 'Denver')
 )
 
-st.write(f"## {dataset_name} Dataset")
+st.write(f"## {city_name} people")
 
-classifier_name = st.sidebar.selectbox(
-    'Select classifier',
-    ('KNN', 'SVM', 'Random Forest')
+weekday = st.sidebar.selectbox(
+    'Select Weekday',
+    ('Monday', 'Tuesday','Wednesday','Thursday','Friday', 'Saturday', 'Sunday')
+)
+
+sport_type = st.sidebar.selectbox(
+    'Select Weekday',
+    ('Swimming', 'Running', 'Yoga', 'Basketball', 'Cycling', 'Tennis', 'Walking', 'Stretching', 'Calisthenics', 'Soccer', 'Table Tennis')
+)
+
+duration= st.sidebar.selectbox(
+    'Select duration',
+    ('5min','10min','15min', '20min', '25min', '30min','35mmin', '40min','45min', '50min','55min', '60min', '65min', '70min', '75min', '80min', '85min', '90min')
 )
 
 def get_dataset(name):
