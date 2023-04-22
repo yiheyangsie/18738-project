@@ -1,5 +1,5 @@
-import streamlit as st 
-import numpy as np 
+import streamlit as st
+import numpy as np
 
 import matplotlib.pyplot as plt
 from sklearn import datasets
@@ -22,25 +22,36 @@ Which fits you best?
 
 city_name = st.sidebar.selectbox(
     'Select City',
-    ('Pittsburgh','San Francisco', 'Austin', 'New York City', 'Boston','Los Angeles', 'San Diego','Chicago', 'Seattle', 'Denver')
+    ('Pittsburgh', 'San Francisco', 'Austin', 'New York City', 'Boston',
+     'Los Angeles', 'San Diego', 'Chicago', 'Seattle', 'Denver')
 )
 
 st.write(f"## {city_name} people")
 
 weekday = st.sidebar.selectbox(
     'Select Weekday',
-    ('Monday', 'Tuesday','Wednesday','Thursday','Friday', 'Saturday', 'Sunday')
+    ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')
 )
 
 sport_type = st.sidebar.selectbox(
-    'Select Weekday',
-    ('Swimming', 'Running', 'Yoga', 'Basketball', 'Cycling', 'Tennis', 'Walking', 'Stretching', 'Calisthenics', 'Soccer', 'Table Tennis')
+    'Select sports type',
+    ('Swimming', 'Running', 'Yoga', 'Basketball', 'Cycling', 'Tennis',
+     'Walking', 'Stretching', 'Calisthenics', 'Soccer', 'Table Tennis')
 )
 
-duration= st.sidebar.selectbox(
+duration = st.sidebar.selectbox(
     'Select duration',
-    ('5min','10min','15min', '20min', '25min', '30min','35mmin', '40min','45min', '50min','55min', '60min', '65min', '70min', '75min', '80min', '85min', '90min')
+    ('5min', '10min', '15min', '20min', '25min', '30min', '35mmin', '40min', '45min',
+     '50min', '55min', '60min', '65min', '70min', '75min', '80min', '85min', '90min')
 )
+
+
+st.write('City:', city_name)
+st.write('Weekday:', weekday)
+
+st.write('Sport type:', sport_type)
+st.write('Duration:', duration)
+
 
 def get_dataset(name):
     data = None
@@ -54,9 +65,11 @@ def get_dataset(name):
     y = data.target
     return X, y
 
-X, y = get_dataset(dataset_name)
-st.write('Shape of dataset:', X.shape)
-st.write('number of classes:', len(np.unique(y)))
+
+# X, y = get_dataset(dataset_name)
+# st.write('Shape of dataset:', X.shape)
+# st.write('number of classes:', len(np.unique(y)))
+
 
 def add_parameter_ui(clf_name):
     params = dict()
@@ -73,7 +86,8 @@ def add_parameter_ui(clf_name):
         params['n_estimators'] = n_estimators
     return params
 
-params = add_parameter_ui(classifier_name)
+# params = add_parameter_ui(classifier_name)
+
 
 def get_classifier(clf_name, params):
     clf = None
@@ -82,40 +96,41 @@ def get_classifier(clf_name, params):
     elif clf_name == 'KNN':
         clf = KNeighborsClassifier(n_neighbors=params['K'])
     else:
-        clf = clf = RandomForestClassifier(n_estimators=params['n_estimators'], 
-            max_depth=params['max_depth'], random_state=1234)
+        clf = clf = RandomForestClassifier(n_estimators=params['n_estimators'],
+                                           max_depth=params['max_depth'], random_state=1234)
     return clf
 
-clf = get_classifier(classifier_name, params)
+# clf = get_classifier(classifier_name, params)
 #### CLASSIFICATION ####
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1234)
+# X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1234)
 
-clf.fit(X_train, y_train)
-y_pred = clf.predict(X_test)
+# clf.fit(X_train, y_train)
+# y_pred = clf.predict(X_test)
 
-acc = accuracy_score(y_test, y_pred)
+# acc = accuracy_score(y_test, y_pred)
 
-st.write(f'Classifier = {classifier_name}')
-st.write(f'Accuracy =', acc)
+# st.write(f'Classifier = {classifier_name}')
+# st.write(f'Accuracy =', acc)
 
 #### PLOT DATASET ####
 # Project the data onto the 2 primary principal components
-pca = PCA(2)
-X_projected = pca.fit_transform(X)
+# pca = PCA(2)
+# X_projected = pca.fit_transform(X)
 
-x1 = X_projected[:, 0]
-x2 = X_projected[:, 1]
+# x1 = X_projected[:, 0]
+# x2 = X_projected[:, 1]
 
-fig = plt.figure()
-plt.scatter(x1, x2,
-        c=y, alpha=0.8,
-        cmap='viridis')
+# fig = plt.figure()
+# plt.scatter(x1, x2,
+#         c=y, alpha=0.8,
+#         cmap='viridis')
 
-plt.xlabel('Principal Component 1')
-plt.ylabel('Principal Component 2')
-plt.colorbar()
+# plt.xlabel('Principal Component 1')
+# plt.ylabel('Principal Component 2')
+# plt.colorbar()
 
-#plt.show()
-st.pyplot(fig)
+
+# #plt.show()
+# st.pyplot(fig)
 print("it renders again")
