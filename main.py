@@ -73,14 +73,11 @@ calories_min = df["Calories Consumed"].min()
 calories_max = df["Calories Consumed"].max()
 df = merge_user_rows(df, duration_min, duration_max,
                      calories_min,  calories_max)
-# print(df)
+
 
 # fit model
 X = df[list(df.columns)[1:]]
-# X["Duration (min)"] = (X["Duration (min)"] - X["Duration (min)"].min()
-#                        ) / (X["Duration (min)"].max() - X["Duration (min)"].min())
-# X["Calories Consumed"] = (X["Calories Consumed"] - X["Calories Consumed"].min()) / \
-#     (X["Calories Consumed"].max() - X["Calories Consumed"].min())
+
 neigh = NearestNeighbors(n_neighbors=2)
 nbrs = neigh.fit(X)
 
@@ -90,11 +87,7 @@ query = [
 input_df = generate_input(query, df)
 processed_input = merge_user_rows(
     input_df, duration_min, duration_max, calories_min,  calories_max).iloc[:, 1:].values.tolist()
-# processed_input["Duration (min)"] = (processed_input["Duration (min)"] - processed_input["Duration (min)"].min()
-#                                      ) / (processed_input["Duration (min)"].max() - processed_input["Duration (min)"].min())
-# processed_input["Calories Consumed"] = (processed_input["Calories Consumed"] - processed_input["Calories Consumed"].min()) / \
-#     (processed_input["Calories Consumed"].max() -
-#      processed_input["Calories Consumed"].min())
+
 print(f"processed_input: {processed_input}")
 
 distances, indices = nbrs.kneighbors(processed_input)
@@ -109,9 +102,6 @@ for user in usernames:
     output_users += user
     output_users += ","
 st.write('Mates selected:', output_users)
-
-# for index in indices:
-#   print(df.iloc[index])
 
 
 print("it renders again")
