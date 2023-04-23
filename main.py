@@ -22,10 +22,6 @@ Which fits you best?
 
 city_name = st.sidebar.selectbox(
     'Select City',
-<<<<<<< HEAD
-    ('Pittsburgh', 'San Francisco', 'Austin', 'New York City', 'Boston',
-     'Los Angeles', 'San Diego', 'Chicago', 'Seattle', 'Denver')
-=======
     ("Aberdeen", "Abilene", "Akron", "Albany", "Albuquerque", "Alexandria",
         "Allentown", "Amarillo", "Anaheim", "Anchorage", "Ann Arbor",
         "Antioch", "Apple Valley", "Appleton", "Arlington", "Arvada", "Asheville",
@@ -66,7 +62,6 @@ city_name = st.sidebar.selectbox(
         "Thousand Oaks", "Toledo", "Topeka", "Torrance", "Trenton", "Tucson", "Tulsa", "Tuscaloosa", "Tyler", "Utica", "Vallejo", "Vancouver", "Vero Beach", "Victorville",
         "Virginia Beach", "Visalia", "Waco", "Warren", "Washington", "Waterbury", "Waterloo", "West Covina", "West Valley City", "Westminster", "Wichita", "Wilmington", "Winston",
         "Winter Haven", "Worcester", "Yakima", "Yonkers", "York", "Youngstown")
->>>>>>> fb989aa (fix conflict)
 )
 
 st.write(f"## {city_name} people")
@@ -77,11 +72,7 @@ weekday = st.sidebar.selectbox(
 )
 
 sport_type = st.sidebar.selectbox(
-<<<<<<< HEAD
-    'Select sports type',
-=======
     'Select Sport Type',
->>>>>>> fb989aa (fix conflict)
     ('Swimming', 'Running', 'Yoga', 'Basketball', 'Cycling', 'Tennis',
      'Walking', 'Stretching', 'Calisthenics', 'Soccer', 'Table Tennis')
 )
