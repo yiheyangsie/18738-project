@@ -7,7 +7,7 @@ def merge_user_rows(df):
    merged_df = df.groupby('ID').sum().reset_index()
    merged_df['Duration (min)'] = merged_df.apply(lambda x: x['Duration (min)'] / id_counts[x['ID']], axis=1)
    merged_df['Calories Consumed'] = merged_df.apply(lambda x: x['Calories Consumed'] / id_counts[x['ID']], axis=1)
-   return merged_df
+   return merged_df.astype(int)
 
 # def time_to_float(time_str):
 #       # parse time string into datetime object
@@ -63,7 +63,7 @@ query = [
 ]
 input_df = generate_input(query)
 processed_input = merge_user_rows(input_df).iloc[:,1:].values.tolist()
-# print(processed_input)
+print(processed_input)
 
 distances, indices = nbrs.kneighbors(processed_input)
 print(indices)
