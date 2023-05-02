@@ -1,0 +1,198 @@
+ID,Location (City),Weekday,Sport Type,Duration (min),Calories Consumed
+FitFanatic,San Francisco,Sunday,Swimming,45,450
+FitFanatic,San Francisco,Tuesday,Running,30,320
+FitFanatic,San Francisco,Wednesday,Yoga,60,250
+FitFanatic,San Francisco,Thursday,Basketball,60,500
+FitFanatic,San Francisco,Saturday,Cycling,90,600
+HealthyHiker,Austin,Sunday,Running,30,300
+HealthyHiker,Austin,Tuesday,Swimming,45,400
+HealthyHiker,Austin,Thursday,Running,30,300
+HealthyHiker,Austin,Saturday,Swimming,45,400
+GymGuru,New York City,Monday,Weightlifting,60,400
+GymGuru,New York City,Wednesday,Yoga,75,250
+GymGuru,New York City,Friday,Spinning,45,400
+GymGuru,New York City,Sunday,Running,45,350
+ActiveAce,Los Angeles,Monday,Swimming,30,250
+ActiveAce,Los Angeles,Tuesday,Tennis,90,600
+ActiveAce,Los Angeles,Thursday,Running,45,400
+ActiveAce,Los Angeles,Saturday,Yoga,60,300
+FitFrenzy,Chicago,Monday,High-Intensity Interval Training (HIIT),60,500
+FitFrenzy,Chicago,Tuesday,Running,30,300
+FitFrenzy,Chicago,Wednesday,Pilates,45,200
+FitFrenzy,Chicago,Thursday,Weightlifting,60,400
+FitFrenzy,Chicago,Friday,Cycling,60,500
+FitnessFan,Miami,Monday,Swimming,45,400
+FitnessFan,Miami,Tuesday,Running,60,500
+FitnessFan,Miami,Thursday,Yoga,90,350
+FitnessFan,Miami,Saturday,Spinning,45,400
+PixelPenguin,San Francisco,Sunday,Swimming,45,450
+PixelPenguin,San Francisco,Tuesday,Running,30,320
+PixelPenguin,San Francisco,Wednesday,Yoga,60,250
+PixelPenguin,San Francisco,Thursday,Basketball,60,500
+PixelPenguin,San Francisco,Saturday,Cycling,90,600
+WanderlustWarrior,Austin,Sunday,Running,30,300
+WanderlustWarrior,Austin,Tuesday,Swimming,45,400
+WanderlustWarrior,Austin,Thursday,Running,30,300
+WanderlustWarrior,Austin,Saturday,Swimming,45,400
+CozyCabin,New York City,Monday,Yoga,60,200
+CozyCabin,New York City,Wednesday,Running,45,450
+CozyCabin,New York City,Friday,Yoga,60,200
+CozyCabin,New York City,Saturday,Running,45,450
+ChirpingBird,Boston,Sunday,Cycling,60,500
+ChirpingBird,Boston,Tuesday,Tennis,90,600
+ChirpingBird,Boston,Thursday,Cycling,60,500
+ChirpingBird,Boston,Saturday,Tennis,90,600
+StarryNightSky,Los Angeles,Sunday,Walking,30,100
+StarryNightSky,Los Angeles,Tuesday,Stretching,20,50
+StarryNightSky,Los Angeles,Thursday,Walking,30,100
+StarryNightSky,Los Angeles,Saturday,Stretching,20,50
+RainbowGummyBear,San Diego,Sunday,Running,60,600
+RainbowGummyBear,San Diego,Tuesday,Calisthenics,45,350
+RainbowGummyBear,San Diego,Thursday,Running,60,600
+RainbowGummyBear,San Diego,Saturday,Calisthenics,45,350
+CoffeeCraze,Chicago,Sunday,Swimming,60,500
+CoffeeCraze,Chicago,Tuesday,Running,45,450
+CoffeeCraze,Chicago,Thursday,Swimming,60,500
+CoffeeCraze,Chicago,Saturday,Running,45,450
+AdventureAddict,Seattle,Sunday,Cycling,60,500
+AdventureAddict,Seattle,Tuesday,Yoga,75,300
+AdventureAddict,Seattle,Thursday,Cycling,60,500
+AdventureAddict,Seattle,Saturday,Yoga,75,300
+SimplySassy,Denver,Monday,Basketball,60,400
+SimplySassy,Denver,Wednesday,Soccer,90,600
+SimplySassy,Denver,Friday,Basketball,60,400
+SimplySassy,Denver,Saturday,Soccer,90,600
+SunflowerSmile,Austin,Monday,Table Tennis,45,150
+SunflowerSmile,Austin,Wednesday,Swimming,60,400
+SunflowerSmile,Austin,Friday,Table Tennis,45,150
+SunflowerSmile,Austin,Saturday,Swimming,60,400
+ActiveGym,Houston,Monday,Weightlifting,45,350
+ActiveGym,Houston,Tuesday,Yoga,60,300
+ActiveGym,Houston,Thursday,Running,30,250
+ActiveGym,Houston,Saturday,Swimming,45,400
+FitnessNut,Boston,Monday,Spinning,60,500
+FitnessNut,Boston,Tuesday,Weightlifting,45,400
+FitnessNut,Boston,Wednesday,Running,30,300
+FitnessNut,Boston,Thursday,Yoga,60,250
+FitnessNut,Boston,Friday,Swimming,45,400
+FitFemme,San Diego,Monday,Pilates,60,250
+FitFemme,San Diego,Tuesday,Swimming,45,400
+FitFemme,San Diego,Thursday,Running,30,300
+FitFemme,San Diego,Saturday,Yoga,60,250
+SportySpice,Seattle,Monday,Cycling,45,400
+SportySpice,Seattle,Tuesday,Running,30,320
+SportySpice,Seattle,Wednesday,Yoga,60,250
+SportySpice,Seattle,Thursday,Basketball,60,500
+SportySpice,Seattle,Saturday,Swimming,45,450
+Alex,Los Angeles,Monday,Running,60,600
+Alex,Los Angeles,Tuesday,Yoga,45,225
+Alex,Los Angeles,Wednesday,Basketball,90,900
+Alex,Los Angeles,Thursday,Swimming,60,500
+Alex,Los Angeles,Friday,Cycling,75,750
+Emily,New York,Monday,Running,60,600
+Emily,New York,Tuesday,Yoga,45,225
+Emily,New York,Wednesday,Basketball,90,900
+Emily,New York,Thursday,Swimming,60,500
+Emily,New York,Friday,Cycling,75,750
+Tom,New York,Monday,Swimming,60,500
+Tom,New York,Tuesday,Running,45,350
+Tom,New York,Wednesday,Yoga,60,250
+Tom,New York,Thursday,Basketball,90,700
+Tom,New York,Friday,Cycling,120,1000
+Tom,New York,Saturday,Tennis,90,600
+Tom,New York,Sunday,Walking,60,300
+Alexandra,San Francisco,Monday,Stretching,30,50
+Alexandra,San Francisco,Tuesday,Running,60,500
+Alexandra,San Francisco,Wednesday,Calisthenics,45,400
+Alexandra,San Francisco,Thursday,Soccer,90,800
+Alexandra,San Francisco,Friday,Table Tennis,60,400
+Alexandra,San Francisco,Saturday,Yoga,90,250
+Alexandra,San Francisco,Sunday,Swimming,120,1000
+FitLife24,Los Angeles,Monday,Yoga,60,300
+FitLife24,Los Angeles,Wednesday,Cycling,45,400
+FitLife24,Los Angeles,Friday,Running,30,250
+FitLife24,Los Angeles,Sunday,Stretching,30,150
+FitZone,Miami,Monday,Swimming,45,450
+FitZone,Miami,Wednesday,Running,30,300
+FitZone,Miami,Friday,Yoga,60,300
+FitZone,Miami,Sunday,Cycling,45,400
+ActiveJock,New York,Monday,Basketball,60,500
+ActiveJock,New York,Tuesday,Running,30,320
+ActiveJock,New York,Wednesday,Tennis,45,350
+ActiveJock,New York,Thursday,Swimming,45,400
+ActiveJock,New York,Friday,Calisthenics,30,250
+FitGuy,Chicago,Monday,Yoga,60,300
+FitGuy,Chicago,Tuesday,Running,30,320
+FitGuy,Chicago,Wednesday,Swimming,45,400
+FitGuy,Chicago,Thursday,Cycling,45,400
+FitGuy,Chicago,Saturday,Stretching,30,150
+FitGirl,San Francisco,Monday,Running,30,320
+FitGirl,San Francisco,Tuesday,Yoga,60,300
+FitGirl,San Francisco,Wednesday,Swimming,45,450
+FitGirl,San Francisco,Thursday,Cycling,45,400
+FitGirl,San Francisco,Saturday,Calisthenics,30,250
+FitnessPro,Atlanta,Monday,Yoga,60,300
+FitnessPro,Atlanta,Tuesday,Running,30,250
+FitnessPro,Atlanta,Wednesday,Tennis,45,350
+FitnessPro,Atlanta,Thursday,Swimming,45,400
+FitnessPro,Atlanta,Friday,Stretching,30,150
+WorkoutMan,Dallas,Monday,Cycling,45,400
+jdoe123,New York City,Monday,Running,45,500
+ksmith456,Los Angeles,Tuesday,Yoga,60,250
+mlee789,Chicago,Wednesday,Swimming,30,350
+jgarcia321,Houston,Thursday,Tennis,90,700
+bmiller654,Miami,Friday,Cycling,75,600
+lturner789,New York City,Saturday,Running,60,550
+abrown123,Los Angeles,Sunday,Yoga,45,300
+mjohnson456,Houston,Monday,Calisthenics,20,150
+rsmith789,Miami,Tuesday,Swimming,45,400
+hlee012,Chicago,Wednesday,Stretching,15,50
+jgomez456,New York City,Thursday,Basketball,60,500
+mwhite789,Los Angeles,Friday,Cycling,90,700
+ksanchez012,Houston,Saturday,Tennis,75,600
+llewis456,Miami,Sunday,Walking,30,150
+bwalker789,Chicago,Monday,Running,60,550
+charris012,New York City,Tuesday,Yoga,60,250
+rlopez456,Los Angeles,Wednesday,Swimming,30,350
+jreed789,Houston,Thursday,Basketball,90,800
+bsanders012,Miami,Friday,Cycling,75,600
+lmorris456,Chicago,Saturday,Tennis,60,500
+ssmith789,New York City,Sunday,Walking,45,200
+kkim012,Los Angeles,Monday,Running,45,500
+rlee456,Houston,Tuesday,Calisthenics,15,100
+ajones789,Miami,Wednesday,Stretching,15,50
+jgonzalez012,Chicago,Thursday,Swimming,45,400
+krodriguez456,New York City,Friday,Basketball,60,500
+gmiller789,Los Angeles,Saturday,Yoga,90,400
+rjackson012,Houston,Sunday,Walking,30,150
+jrobinson456,Miami,Monday,Running,60,550
+kstewart789,Chicago,Tuesday,Cycling,75,600
+FlexyMcMuscles,San Francisco,Monday,Swimming,45,450
+CardioQueen,San Francisco,Tuesday,Running,30,320
+YogaYoda,San Francisco,Wednesday,Yoga,60,250
+HoopDreams,San Francisco,Thursday,Basketball,60,500
+PedalPower,San Francisco,Friday,Cycling,45,600
+TennisTornado,San Francisco,Saturday,Tennis,60,350
+StretchingSensation,Austin,Monday,Stretching,30,150
+SoccerStar,Austin,Tuesday,Soccer,45,400
+TableTennisTiger,Austin,Wednesday,Table Tennis,30,250
+WalkingWarrior,Austin,Thursday,Walking,30,200
+GymGoddess,Austin,Friday,Calisthenics,30,250
+CardioCrusader,Boston,Monday,Running,30,320
+YogaWarrior,Boston,Tuesday,Yoga,60,300
+BallerinaBunny,Boston,Wednesday,Stretching,30,150
+CalisthenicsCrusher,Boston,Thursday,Calisthenics,45,350
+CyclingSiren,Boston,Friday,Cycling,45,400
+RunningRanger,Seattle,Monday,Running,30,320
+YogaNinja,Seattle,Tuesday,Yoga,60,300
+HoopsHunk,Seattle,Wednesday,Basketball,60,500
+SwimSiren,Seattle,Thursday,Swimming,45,450
+PowerPedaler,Seattle,Friday,Cycling,45,400
+JumpingJester,Portland,Monday,Calisthenics,30,250
+YogaEnthusiast,Portland,Tuesday,Yoga,60,300
+DribbleDiva,Portland,Wednesday,Basketball,60,500
+CycleSavant,Portland,Thursday,Cycling,45,400
+StretchingSpectacle,Portland,Friday,Stretching,30,150
+WalkingWonder,Denver,Monday,Walking,30,200
+SoccerSavage,Denver,Tuesday,Soccer,45,400
+TableTennisTornado,Denver,Wednesday,Table Tennis,30,250

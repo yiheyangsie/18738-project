@@ -64,7 +64,7 @@ st.write('Duration:', duration)
 st.write('Calories goal:', calories)
 
 
-df = pd.read_csv("sport_data.csv")
+df = pd.read_csv("sport_data2.csv")
 # drop location
 df = df.drop('Location (City)', axis=1)
 df = handle_categorical(df)
